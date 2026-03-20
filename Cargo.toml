@@ -1,0 +1,10 @@
+[package]
+name = "kitaabe"
+version = "0.1.0"
+edition = "2021"
+description = "CLI-first book exploration engine powered by OpenLibrary"
+license = "MIT"
+repository = "https://github.com/pavan2318/kitaabe"
+readme = "README.md"
+keywords = ["books", "cli", "openlibrary", "search"]
+categories = ["command-line-utilities"]
