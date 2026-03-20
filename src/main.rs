@@ -9,7 +9,14 @@ use error::KitaabeError;
 
 #[tokio::main]
 async fn main() -> Result<(), KitaabeError> {
-    let query = cli::get_query()?;
+    let query = match cli::get_query() {
+        Ok(q) => q,
+        Err(_) => {
+            println!("Usage: kitaabe \"search query\"");
+            return Ok(());
+        }
+    };
+
     run_search(&query).await?;
     Ok(())
 }
